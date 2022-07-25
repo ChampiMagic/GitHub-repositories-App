@@ -6,16 +6,20 @@ const RepositoryExtra = (props) => {
     return (
         <View style={{ flexDirection: 'row', justifyContent:'space-around' }}>
             <View>
-                <StyledText align='center' fontWeight='bold'>Company:</StyledText>
-                <StyledText >{props.company}</StyledText>
+                <StyledText align='center' fontWeight='bold'>Stars</StyledText>
+                <StyledText >{props.stargazersCount}</StyledText>
             </View>
             <View> 
-                <StyledText align='center' fontWeight='bold'>Gender:</StyledText>
-                <StyledText >Gender: {props.gender}</StyledText>
+                <StyledText align='center' fontWeight='bold'>Forks</StyledText>
+                <StyledText >{props.forksCount}</StyledText>
             </View>
             <View>
-                <StyledText align='center' fontWeight='bold'>Address:</StyledText>
-                <StyledText >{props.address}</StyledText>
+                <StyledText align='center' fontWeight='bold'>Review</StyledText>
+                <StyledText >{props.reviewCount}</StyledText>
+            </View>
+            <View>
+                <StyledText align='center' fontWeight='bold'>Rating</StyledText>
+                <StyledText >{props.ratingAverage}</StyledText>
             </View>
         </View>
     )

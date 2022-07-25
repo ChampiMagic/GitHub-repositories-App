@@ -1,17 +1,21 @@
 import React from "react";
 import { Text, View, FlatList, Button } from "react-native";
-import Data from "./data";
 import RepositoryItem from "./RepositoryItems"
+import useRepositories from "./hooks/repositories";
+
 
 const RepositoryList = ({ navigation }) => {
+
+    const {repositories} = useRepositories();
+    
     return (
-        <View>
+        <View style={{ flex: 1}}>
              <Button 
             title="Login"
             onPress={() => navigation.navigate("Login")}
             />
             <FlatList
-            data={Data} 
+            data={repositories} 
             ItemSeparatorComponent={() => <Text></Text>}
             renderItem={({item: data }) => (
               <RepositoryItem {...data}/>

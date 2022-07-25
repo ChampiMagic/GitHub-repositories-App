@@ -8,12 +8,12 @@ const RespositoryHeader = (props) => {
     return (
         <View style={{ flexDirection:'row', paddingBottom: 2 }}>
             <View>
-              <Image style={styles.img} source={{ uri: props.picture }} />
+              <Image style={styles.img} source={{ uri: props.ownerAvatarUrl }} />
             </View>
             <View style={{ flex: 1, paddingLeft: 10 }}>
-                <StyledText style={{ marginBottom: 3 }} fontWeight='bold' color='primary'>Name: {props.name}</StyledText>
-                <StyledText style={{ marginBottom: 3 }} >Age: {props.age}</StyledText>
-                <StyledText style={styles.email}>{props.email}</StyledText>
+                <StyledText style={{ marginBottom: 3 }} fontWeight='bold' color='primary'>Name: {props.fullName}</StyledText>
+                <StyledText style={{ marginBottom: 3 }} >Age: {props.description}</StyledText>
+                <StyledText style={styles.email}>{props.language}</StyledText>
             </View> 
         </View>
     )
